@@ -53,7 +53,8 @@ RUN apt-get -qqy update \
     && wget https://launcher.mojang.com/download/Minecraft.deb \
     && apt install -qqy --no-install-recommends ./Minecraft.deb \
     && apt install -qqy -y --no-install-recommends curl
-    && curl https://gitlab.com/brinkervii/grapejuice/-/raw/master/ci_scripts/signing_keys/public_key.gpg | tee /usr/share/keyrings/grapejuice-archive-keyring.gpg > /dev/null
+    && curl https://gitlab.com/brinkervii/grapejuice/-/raw/master/ci_scripts/signing_keys/public_key.gpg 
+    && tee /usr/share/keyrings/grapejuice-archive-keyring.gpg > /dev/null
     && tee /etc/apt/sources.list.d/grapejuice.list <<< 'deb [signed-by=/usr/share/keyrings/grapejuice-archive-keyring.gpg] https://brinkervii.gitlab.io/grapejuice/repositories/debian/ universal main' > /dev/null
     && apt update
     && apt install -qqy --no-install-recommends -y grapejuice
