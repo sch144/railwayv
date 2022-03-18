@@ -19,6 +19,20 @@ Terminal=false
 StartupNotify=true
 EOF
 chmod +x /Desktop/Chromium.desktop
+#====== Add Minecraft
+cat << EOF >  /Desktop/Minecraft.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Minecraft
+Comment=Play Minecraft!
+Exec=/usr/bin/minecraft
+Icon=minecraft
+Path=
+Terminal=false
+StartupNotify=true
+EOF
+chmod +x /Desktop/Minecraft.desktop
 
 if ! whoami &> /dev/null; then
   if [ -w /etc/passwd ]; then
