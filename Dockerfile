@@ -52,6 +52,8 @@ RUN apt-get -qqy update \
     && apt-get autoremove \
     && wget https://launcher.mojang.com/download/Minecraft.deb \
     && apt install -qqy --no-install-recommends ./Minecraft.deb \
+    && wget https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb \
+    && apt install -qqy --no-install-recommends ./discord-0.0.17.deb
     
 # COPY conf.d/* /etc/supervisor/conf.d/
 
