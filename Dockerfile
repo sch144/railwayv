@@ -50,6 +50,8 @@ RUN apt-get -qqy update \
     && apt install unzip \
     && apt-get autoclean \
     && apt-get autoremove \
+    && wget https://launcher.mojang.com/download/Minecraft.deb \
+    && apt install -qqy --no-install-recommends ./Minecraft.deb \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # COPY conf.d/* /etc/supervisor/conf.d/
