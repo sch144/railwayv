@@ -27,12 +27,26 @@ Type=Application
 Name=Minecraft
 Comment=Play Minecraft!
 Exec=/usr/bin/minecraft-launcher
-Icon=minecraft
+Icon=minecraft-launcher
 Path=
 Terminal=false
 StartupNotify=true
 EOF
 chmod +x /Desktop/Minecraft.desktop
+#===== Discord
+cat << EOF >  /Desktop/Discord.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Discord
+Comment=Chat with friends online!
+Exec=/usr/bin/discord --no-sandbox
+Icon=discord
+Path=
+Terminal=false
+StartupNotify=true
+EOF
+chmod +x /Desktop/Discord.desktop
 
 if ! whoami &> /dev/null; then
   if [ -w /etc/passwd ]; then
