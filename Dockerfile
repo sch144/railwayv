@@ -54,6 +54,8 @@ RUN apt-get -qqy update \
     && apt install -qqy --no-install-recommends ./Minecraft.deb \
     && wget https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb \
     && apt install -qqy --no-install-recommends ./discord-0.0.17.deb \
+    && wget https://github.com/hmlendea/geforcenow-electron/releases/download/v1.1.12/geforcenow-electron_1.1.12_linux.deb \
+    && apt install -qqy --no-install-recommends ./geforcenow-electron_1.1.12_linux.deb \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
 # COPY conf.d/* /etc/supervisor/conf.d/
