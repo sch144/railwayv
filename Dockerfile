@@ -54,7 +54,6 @@ RUN apt-get -qqy update \
     && apt install -qqy --no-install-recommends ./Minecraft.deb \
     && wget https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb \
     && apt install -qqy --no-install-recommends ./discord-0.0.17.deb \
-    && wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 \
     && wget https://az764295.vo.msecnd.net/stable/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/code_1.65.2-1646927742_amd64.deb \
     && apt install -qqy --no-install-recommends ./code_1.65.2-1646927742_amd64.deb \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
